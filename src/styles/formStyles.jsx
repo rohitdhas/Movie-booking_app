@@ -24,6 +24,31 @@ export const FormLayout = styled.form`
     }
   }
 
+  .input {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin: 3px 0;
+    }
+
+    input {
+      padding: 5px;
+      outline: none;
+      border-radius: 5px;
+      border: 1px solid lightgray;
+
+      &:focus {
+        border: 1px solid royalblue;
+      }
+    }
+  }
+
+  .name_input {
+    padding-top: 10px;
+    border-top: 2px solid lightgray;
+  }
+
   &.active {
     transform: translateY(0px);
     opacity: 1;

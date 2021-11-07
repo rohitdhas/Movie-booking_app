@@ -5,7 +5,7 @@ export default function Form({ showData }) {
   const { bookMovie } = useBookings();
   return (
     <FormOverlay id="form_overlay">
-      <FormLayout id="form">
+      <FormLayout id="form" onSubmit={(e) => bookMovie(e, showData.id)}>
         <div className="icon">
           <span onClick={closeForm} className="material-icons">
             disabled_by_default
@@ -15,7 +15,7 @@ export default function Form({ showData }) {
           <strong>Show Name - </strong> {showData.name}
         </div>
         <div>
-          <strong>Ratings -</strong> {showData.rating.average}⭐
+          <strong>Ratings -</strong> {showData.rating.average || 0}⭐
         </div>
         <div>
           <strong>Schedule⌚</strong> -{" "}
@@ -29,9 +29,25 @@ export default function Form({ showData }) {
         <div>
           <strong>Runtime - </strong>({showData.runtime || 0} min)
         </div>
-        <button onClick={(e) => bookMovie(e, showData.id)}>
-          Confirm Your Booking
-        </button>
+        <div className="name_input input">
+          <label>
+            <strong>Name</strong>
+          </label>
+          <input type="text" placeholder="Your Name" required />
+        </div>
+        <div className="email_input input">
+          <label>
+            <strong>Email</strong>
+          </label>
+          <input type="email" placeholder="Your Email" required />
+        </div>
+        <div className="phone_input input">
+          <label>
+            <strong>Phone</strong>
+          </label>
+          <input type="number" placeholder="Your Phone Number" required />
+        </div>
+        <button type="submit">Confirm Your Booking</button>
       </FormLayout>
     </FormOverlay>
   );
