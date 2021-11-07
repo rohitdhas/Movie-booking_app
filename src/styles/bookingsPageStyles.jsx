@@ -4,6 +4,7 @@ const BookingsPageLayout = styled.div`
   h1 {
     text-align: center;
     padding: 2rem;
+    margin-top: 2rem;
     border-bottom: 2px solid lightgray;
   }
 

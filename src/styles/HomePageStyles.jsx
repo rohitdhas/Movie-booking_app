@@ -3,13 +3,14 @@ import styled from "styled-components";
 export const HomePageLayout = styled.div`
   h1 {
     padding: 2rem 0;
+    margin-top: 2rem;
     text-align: center;
     border-bottom: 2px solid lightgray;
   }
 
   #icon {
     position: fixed;
-    top: 3rem;
+    top: 4rem;
     right: 2rem;
     padding: 2px;
     border-radius: 5px;
@@ -48,16 +49,7 @@ export const HomePageLayout = styled.div`
 
   @media (max-width: 750px) {
     #icon {
-      top: 10px;
-      right: 10px;
-
-      &::after {
-        font-size: 1rem;
-        padding: 5px 7px;
-      }
-      span {
-        font-size: 3rem;
-      }
+      display: none;
     }
   }
 `;

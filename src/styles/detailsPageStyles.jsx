@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const DetailsLayout = styled.div`
   display: flex;
+  margin-top: 4rem;
 
   img {
     width: auto;
